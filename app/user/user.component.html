@@ -1,0 +1,20 @@
+<div  *ngFor  = "let u of data ">
+
+
+<h1>  {{u.name}}</h1>
+    <div [ngSwitch]="u.type">
+         <div *ngSwitchCase = "administrador">
+               <h2> administrador</h2>
+         </div>
+         <div *ngSwitchCase = "supervisor">
+               <h2> supeervisor</h2>
+         </div>
+         <div *ngSwitchDefault >
+              <h2>  auxiliar</h2>
+         </div>
+   </div>
+    <p><b>cedual:</b>{{u.indentify|number}}</p>
+    <p><b>dinero:</b>{{u.cash|currency :COP :true}}</p>
+    <p><b>cunpleaños:</b>{{u.birthday|birthday}}</p>
+
+</div>
